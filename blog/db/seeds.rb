@@ -5,3 +5,36 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Post.delete_all
+Post.create!(title: 'CoffeeScript',
+    image:   'cs.jpg',
+    description: 
+    %{<p>
+        CoffeeScript is JavaScript done right. It provides all of JavaScript's
+	functionality wrapped in a cleaner, more succinct syntax. In the first
+	book on this exciting new language, CoffeeScript guru Trevor Burnham
+	shows you how to hold onto all the power and flexibility of JavaScript
+	while writing clearer, cleaner, and safer code.
+      </p>})
+# . . .
+Post.create!(title: 'Programming Ruby 1.9 & 2.0',
+    image: 'ruby.jpg',
+    description:
+        %{<p>
+            Ruby is the fastest growing and most exciting dynamic language
+            out there. If you need to get working programs delivered fast,
+            you should add Ruby to your toolbox.
+        </p>})
+# . . .
+
+Post.create!(title: 'Rails Test Prescriptions',
+    image: 'rtp.jpg',
+    description: 
+        %{<p>
+            <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
+            Rails applications, covering Test-Driven Development from both a
+            theoretical perspective (why to test) and from a practical perspective
+            (how to test effectively). It covers the core Rails testing tools and
+            procedures for Rails 2 and Rails 3, and introduces popular add-ons,
+            including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
+        </p>})

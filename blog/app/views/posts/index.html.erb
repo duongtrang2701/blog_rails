@@ -1,0 +1,34 @@
+<% provide(:page_title, '_All Post_') %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<% @posts.each do |post| %>
+  <div class="card" style="width: 18rem;">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <%= image_tag(post.image, class: 'list_image') %>
+        </div>
+        <div class="flip-card-back">
+          <h4><%= post.title %></h4> 
+          <p><%= post.title %></p> 
+          <p>[[publishedAt]]</p>
+        </div>
+      </div>
+    </div>
+    <p class="title"><%= post.title %></p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <button>
+      <i class="fa fa-eye"> 1,880 </i>
+      <i class="fa fa-comment"> 231</i>
+      <i class="fa fa-info-circle" class="btn btn-primary"> Detail</i>
+    </button>
+  </div>
+  <% end %>
+</div>
