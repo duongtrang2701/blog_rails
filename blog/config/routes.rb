@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'about' => 'pages#about', as: :about
-  get 'contact' => 'pages#contact', as: :contact
+  get 'page/home'
+  get 'page/about'
+  get 'page/contact'
+  resources :user_contacts
 
   resources :posts
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'page#home', as: 'page'
 end

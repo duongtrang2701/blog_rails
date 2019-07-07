@@ -14,3 +14,12 @@
  *= require_self
  */
  @import "bootstrap";
+
+ #banner {
+    background: rgb(223, 235, 191);
+    padding: 10px;
+    border-bottom: 2px solid;
+    font: small-caps 40px/40px "Times New Roman", serif;
+    color: rgb(29, 30, 32);
+    text-align: center;
+}

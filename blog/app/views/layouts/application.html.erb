@@ -10,24 +10,19 @@
 
   <body>
     <!--Navbar-->
-    <div class="container <%= controller_name %> <%= action_name %>">
-      <div class="row">
-        <nav class="navbar navbar-expand-lg navbar-light" id="header">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="home.html"><button type="button" class="btn btn-info">Home</button><span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="about.html"><button type="button" class="btn btn-info">About</button></a>
-              <a class="nav-item nav-link" href="contact.html"><button type="button" class="btn btn-info">Contact</button></a>
-            </div>
+    <div class="row" id="banner">
+      <nav class="navbar navbar-expand-lg navbar-light" id="header">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href= "/page/home"><button type="button" class="btn btn-info">Home</button><span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/page/about"><button type="button" class="btn btn-info">About</button></a>
+            <a class="nav-item nav-link" href="/page/contact"><button type="button" class="btn btn-info">Contact</button></a>
           </div>
-        </nav>
-      </div>
-
+        </div>
+      </nav>
+    </div>
+    <div class="container <%= controller_name %> <%= action_name %>">
       <%= yield %>
-
     </div>
   </body>
 </html>
