@@ -31,4 +31,9 @@
   </div>
   <% end %>
 </div>
-<%= will_paginate @posts %>
+
+<nav>
+  <ul class="pagination pg-teal">
+    <li><%= will_paginate @posts, class: "page-link page-item"%></li>
+  </ul>
+</nav>

@@ -155,3 +155,5 @@ Post.create!(title: '5 RANDOM FACTS I JUST LEARNT ABOUT FRENCH BAGUETTES',
             
             So, the law said that each year, half the bakers could go on vacation in July, and the other half in August.})
 # . . .
+User.create!(name: 'username',
+    password: '123456')

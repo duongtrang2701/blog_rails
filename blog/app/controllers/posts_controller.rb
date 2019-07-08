@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
+  skip_before_action :authorize
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at").paginate(page: params[:page], per_page: 6)
   end
 
   # GET /posts/1
