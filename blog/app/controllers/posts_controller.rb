@@ -1,16 +1,22 @@
 class PostsController < ApplicationController
   skip_before_action :authorize
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  #log action show
+  impressionist :actions=>[:show]
+
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order("created_at").paginate(page: params[:page], per_page: 6)
+    @posts = Post.all.order(created_at: :DESC).paginate(page: params[:page], per_page: 6)
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comments = Comment.all.order(created_at: :ASC)
+    # log an impression per model in controller
+    impressionist(@post)
   end
 
   # GET /posts/new
