@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+    has_many :comments
     validates :title, :description, :image, presence: true
     validates :title, uniqueness: true
     validates :image, allow_blank: true, format: {

@@ -12,8 +12,7 @@
         </div>
         <div class="flip-card-back">
           <h4><%= post.title %></h4> 
-          <p><%= post.title %></p> 
-          <p>[[publishedAt]]</p>
+          <p><%= post.created_at %></p> 
         </div>
       </div>
     </div>
@@ -26,9 +25,10 @@
     </div>
     <button>
       <i class="fa fa-eye"> 1,880 </i>
-      <i class="fa fa-comment"> 231</i>
-      <i class="fa fa-info-circle" class="btn btn-primary"> <%= link_to 'Show', post %></i>
+      <i class="fa fa-comment"> <%= post.comments.count%> </i>
+      <i class="fa fa-info-circle" class="btn btn-primary"> <%= link_to 'Show', post %> </i>
     </button>
   </div>
   <% end %>
 </div>
+<%= will_paginate @posts %>

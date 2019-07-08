@@ -1,0 +1,19 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+<div class="media">
+  <div class="media-body">
+    <div class="media mt-3 shadow-textarea">
+      <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg"
+        alt="Generic placeholder image">
+      <div class="media-body">
+        <div class="form-group basic-textarea rounded-corners">
+          <%= f.text_area :comment, class: 'form-control z-depth-1', id: "exampleFormControlTextarea345", rows: "3", placeholder: "Write your comment..."  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= f.button :submit,  class: "btn btn-primary" %>
+<% end %>
+
+

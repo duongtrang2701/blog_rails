@@ -15,4 +15,15 @@
   <strong>Description:</strong>
   <%= @post.description %>
 </p>
+<section>
+  <div class="container">
+    <h2 class="subtitle 5"><strong><%= @post.comments.count%></strong> Comments</h2>
+    <%= render @post.comments%>
+    <div class="comment-form">
+			<hr />
+			<h3 class="subtitle 3">Leave a reply</h3>
+	 		<%= render 'comments/form' %>
+		</div>
+  </div>
+</section>
 
