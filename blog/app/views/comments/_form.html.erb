@@ -1,4 +1,4 @@
-<%= form_for([@post, @post.comments.build]) do |f| %>
+<%= form_for([@post, @post.comments.build], remote: true) do |f| %>
 <div class="media">
   <div class="media-body">
     <div class="media mt-3 shadow-textarea">
@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<%= f.submit 'Comment',  class: "btn btn-primary" %>
+<%= f.submit 'Comment',  class: "btn btn-primary"%>
 <% end %>
 
 

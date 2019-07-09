@@ -29,16 +29,14 @@
 
   <section>
     <div class="container">
-
       <h2 class="subtitle 5"><strong><%= @post.comments.count%></strong> Comments
         <strong><%= @post.impressionist_count%></strong> Views
       </h2>
-      <%= render @post.comments%>
-      <div class="comment-form">
+      <div id="com">
+        <%= render @post.comments%>
+      </div>
         <hr />
         <%= render 'comments/form' %>
-      </div>
-
     </div>
   </section>
 </div>

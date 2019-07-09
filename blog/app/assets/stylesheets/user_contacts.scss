@@ -2,28 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-    .alert{
-      width: 400px;
-      margin: auto;;
-      display: none;
-    }
-    .contact-header{
-      font-family: 'Oleo Script', cursive;
-      color:#fcc500;
-      font-size: 45px;
-    }
-    
-    #contact{
-      font-family: 'Teko', sans-serif;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      margin-top: 30px;
-      margin-left: auto;
-      margin-right: auto;
-      height: 100%;
-      width: 80%;
-      background: #3a6186; 
-      background: -webkit-linear-gradient(to left, #3a6186 , #89253e); 
-      background: linear-gradient(to left, #3a6186 , #89253e);
-      color : #fff;    
-    }  
+.alert{
+  width: 400px;
+  margin: auto;;
+  display: none;
+}
+.contact-header{
+  font-family: 'Oleo Script', cursive;
+  color:#191433;
+  font-size: 45px;
+}
+
+#contact{
+  font-family: 'Teko', sans-serif;
+  padding: 1em 2em 1em 2em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 80%;
+  background: #3a6186; 
+  background: -webkit-linear-gradient(to left, #e0dec0 , #e6a5b5); 
+  background: linear-gradient(to left, #e0dec0 , #e6a5b5); 
+  color : rgb(0, 0, 0);    
+}  
