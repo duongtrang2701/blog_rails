@@ -1,37 +1,72 @@
 <%= form_with(model: user_contact, local: true) do |form| %>
-  <% if user_contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user_contact.errors.count, "error") %> prohibited this user_contact from being saved:</h2>
 
-      <ul>
-      <% user_contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <section class="mb-4" id="contact">
+  <h2 class="h1-responsive font-weight-bold text-center contact-header">Contact us</h2>
+  <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+    a matter of hours to help you.</p>
+  <div class="row">
+    <div class="col-md-9 mb-md-0 mb-5">
+        <form id="contact-form" name="contact-form" action="" method="POST" class="was-validated">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="md-form mb-0 ml-3 mr-3">
+                <%= form.text_field :name, class: "form-control", required: :required %>
+                <label for="name" class="">Your name</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="md-form mb-0 ml-3 mr-3">
+                <%= form.text_field :email, class: "form-control", required: :required %>
+                <label for="email" class="">Your email</label>
+                <% if user_contact.errors.any? %>
+                  <div id="error_explanation">
+                    <ul>
+                    <% user_contact.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="md-form mb-0 ml-3 mr-3">
+                <%= form.text_field :subject, class: "form-control", required: :required %>
+                <label for="subject" class="">Subject</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="md-form ml-3 mr-3">
+                <%= form.text_area :message, class: "form-control md-textarea", required: :required %>
+                <label for="message">Your message</label>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="text-center text-md-left ml-3 mr-3">
+          <%= form.submit 'Submit',  class: "btn btn-primary actions" %>
+        </div>
+        <div class="status"></div>
+      </div>
+      <div class="col-md-3 text-center">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fa fa-map-marker fa-2x"></i>
+            <p>Nha Be, Ho Chi Minh, Viet Nam</p>
+          </li>
+
+          <li><i class="fa fa-phone  fa-2x"></i>
+            <p>+ 84 234 567 89</p>
+          </li>
+
+          <li><i class="fa fa-envelope  fa-2x"></i>
+            <p>duong1997trang@gmail.com</p>
+          </li>
+        </ul>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :subject %>
-    <%= form.text_field :subject %>
-  </div>
-
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  </section>
 <% end %>

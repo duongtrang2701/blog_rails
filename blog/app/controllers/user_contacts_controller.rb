@@ -1,4 +1,6 @@
 class UserContactsController < ApplicationController
+  skip_before_action :authorize, only: [:new, :create]
+
   before_action :set_user_contact, only: [:show, :edit, :update, :destroy]
 
   # GET /user_contacts
@@ -28,7 +30,8 @@ class UserContactsController < ApplicationController
 
     respond_to do |format|
       if @user_contact.save
-        format.html { redirect_to @user_contact, notice: 'User contact was successfully created.' }
+        UserContactMailer.received(@user_contact).deliver
+        format.html { redirect_to new_user_contact_url, notice: 'Your information was successfully send' }
         format.json { render :show, status: :created, location: @user_contact }
       else
         format.html { render :new }
