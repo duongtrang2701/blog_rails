@@ -1,32 +1,45 @@
 <% provide(:page_title, @post.title) %>
 <p id="notice"><%= notice %></p>
+<div class="center_form">
+  <p><h3 style="text-align:center"><%= @post.title %></h3></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+  <p>
+    <%= @post.description %>
+  </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @post.image %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-<section>
-  <div class="container">
-
-    <h2 class="subtitle 5"><strong><%= @post.comments.count%></strong> Comments
-      <strong><%= @post.impressionist_count%></strong> Views
-    </h2>
-    <%= render @post.comments%>
-    <div class="comment-form">
-      <hr />
-	 		<%= render 'comments/form' %>
-		</div>
-
+  <div class="center">
+    <p>
+      <%= image_tag(@post.image, class: "image_show") %>
+    </p>
   </div>
-</section>
+
+  <p>
+    <%= @post.description %>
+  </p>
+
+  <div class="center">
+    <p>
+      <%= image_tag(@post.image, class: "image_show") %>
+    </p>
+  </div>
+
+  <p>
+    <%= @post.description %>
+  </p>
+
+  <section>
+    <div class="container">
+
+      <h2 class="subtitle 5"><strong><%= @post.comments.count%></strong> Comments
+        <strong><%= @post.impressionist_count%></strong> Views
+      </h2>
+      <%= render @post.comments%>
+      <div class="comment-form">
+        <hr />
+        <%= render 'comments/form' %>
+      </div>
+
+    </div>
+  </section>
+</div>
 

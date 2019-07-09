@@ -25,15 +25,16 @@
     text-align: center;
 }
 #columns {
-    background: rgb(243, 243, 223);
     #main {
       padding: 1em;
-      background: rgb(243, 243, 223);
     }
     #side {
       float: left;
       padding: 1em 2em;
-      width: 13em;
+      margin-right: 2em;
+      width: 10em;
+      height: 35em;
+      margin-right: 5em;
       background: rgb(243, 243, 223);
       form, div {
         display: inline;

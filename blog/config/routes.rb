@@ -6,13 +6,14 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
   
-  get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
   resources :users
+  
   get 'page/home'
   get 'page/about'
   get 'page/contact'
+  
   resources :user_contacts
 
   resources :posts do

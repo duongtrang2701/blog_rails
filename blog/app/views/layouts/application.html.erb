@@ -25,17 +25,18 @@
       </nav>
     </div>
     <div id="columns">
-      <div id="side">
         <% if session[:user_id] %>
-          <ul>
-            <li><%= link_to 'Posts', posts_path,class: "btn btn-info" %></li><br>
-            <li><%= link_to 'Users',  users_path, class: "btn btn-info" %></li>
-          </ul>
-        <%= button_to 'Logout', logout_path, method: :delete, class: "btn btn-info" %>
+          <div id="side">
+            <ul>
+              <li><%= link_to 'Posts', posts_path,class: "btn btn-info" %></li><br>
+              <li><%= link_to 'Users',  users_path, class: "btn btn-info" %></li>
+            </ul>
+            <%= button_to 'Logout', logout_path, method: :delete, class: "btn btn-info" %>
+          </div>
         <% end %>
-      </div>
+    
 
-      <div id="main" class="container <%= controller_name %> <%= action_name %>">
+      <div  id ="main" class="container <%= controller_name %> <%= action_name %>">
         <%= yield %>
       </div>
       

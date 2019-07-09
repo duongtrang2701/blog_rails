@@ -11,22 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group col-md-5">
+    <%= form.label :name, 'Username'%>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter username" %>
   </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+  <div class="form-group col-md-5">
+    <%= form.label :password_field, 'Password'%>
+    <%= form.password_field :password, class: "form-control", placeholder: "Enter password" %> 
   </div>
-
-  <div class="field">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
+  <div class="form-group col-md-5">
+    <%= form.label :password_confirmation, 'Password confirmation'%>
+    <%= form.password_field :password_confirmation, class: "form-control",placeholder: "Enter password confirmation" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit 'Submit',  class: "btn btn-primary actions" %>
 <% end %>
+<hr>
+
