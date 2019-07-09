@@ -16,7 +16,7 @@
  @import "bootstrap";
  @import "font-awesome";
 
- #banner {
+#banner {
     background: rgb(243, 243, 223);
     padding: 10px;
     border-bottom: 2px solid;
@@ -24,4 +24,30 @@
     color: rgb(15, 15, 15);
     text-align: center;
 }
-
+#columns {
+    background: rgb(243, 243, 223);
+    #main {
+      padding: 1em;
+      background: rgb(243, 243, 223);
+    }
+    #side {
+      float: left;
+      padding: 1em 2em;
+      width: 13em;
+      background: rgb(243, 243, 223);
+      form, div {
+        display: inline;
+      }
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          a {
+            color: rgb(255, 255, 255);
+            font-size: small;
+          }
+        }
+      }
+    }
+  }
+  
