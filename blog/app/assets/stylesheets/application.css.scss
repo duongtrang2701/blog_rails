@@ -22,20 +22,24 @@
     border-bottom: 2px solid;
     font: small-caps 40px/40px "Times New Roman", serif;
     color: rgb(15, 15, 15);
-    text-align: center;
 }
+
 #columns {
+  overflow: hidden;
     #main {
-      padding: 1em;
+      width: 80%;
+      margin-left: 12em;
+      padding-bottom: 99999px;
+      margin-bottom: -99999px;
     }
     #side {
-      float: left;
       padding: 1em 2em;
-      margin-right: 2em;
+      margin-left: 1%;
       width: 10em;
       height: 35em;
-      margin-right: 5em;
       background: rgb(243, 243, 223);
+      padding-bottom: 99999px;
+      margin-bottom: -99999px;
       form, div {
         display: inline;
       }

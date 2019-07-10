@@ -11,6 +11,8 @@
     <p>
     <% if @post.image.attached?%>
       <%= image_tag(@post.image, class: "image_show") %>
+    <%else%>
+          <img class="list_image" src="<%=image_path('no-image')%>">
     <%end%>
     </p>
   </div>
@@ -23,6 +25,8 @@
     <p>
       <% if @post.image.attached?%>
         <%= image_tag(@post.image, class: "image_show") %>
+      <%else%>
+          <img class="list_image" src="<%=image_path('no-image')%>">
       <%end%>
     </p>
   </div>

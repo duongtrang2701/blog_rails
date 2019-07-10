@@ -1,8 +1,9 @@
 <div class="media">
-  <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+  <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="<%=image_path('IMG_2794')%>"
     alt="Avatar">
   <div class="media-body">
     <h5 class="mt-0 font-weight-bold blue-text"></h5>
+    <%= link_to 'x', post_comment_path(comment.post, comment),  method: :delete, data: { confirm: 'Are you sure?' }, class: "close" %>
     <%= comment.comment %>
   </div>
 </div>

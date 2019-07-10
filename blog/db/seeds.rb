@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Post.delete_all
 Post.create!(title: 'STRAWBERRY SALMOREJO: A COLD SOUP FOR ANY OCCASION',
-    image:   'image1.jpg',
     description: 
     %{I wasn’t prepared for how much cold soup people eat in southern Spain.
 
@@ -26,7 +25,6 @@ Post.create!(title: 'STRAWBERRY SALMOREJO: A COLD SOUP FOR ANY OCCASION',
         It was still garlicky, savoury, and with a wallop of umami from tomato, but had a juicy freshness and slight herbaceous sweetness from local Huelvan strawberries. As soon as I got home, I started work on the recipe. })
 # . . .
 Post.create!(title: 'A FOODIE’S GUIDE TO LOGROÑO: WHERE TO EAT AND WHAT TO DRINK',
-    image: 'image2.jpg',
     description:
         %{<p>
             Ruby is the fastest growing and most exciting dynamic language
@@ -36,7 +34,6 @@ Post.create!(title: 'A FOODIE’S GUIDE TO LOGROÑO: WHERE TO EAT AND WHAT TO DR
 # . . .
 
 Post.create!(title: 'A BEGINNER’S GUIDE TO SPANISH OLIVE OIL: THE BASICS',
-    image: 'image3.jpg',
     description: 
         %{Picture this:
 
@@ -53,7 +50,6 @@ Post.create!(title: 'A BEGINNER’S GUIDE TO SPANISH OLIVE OIL: THE BASICS',
             Keep reading to learn what makes Spanish olive oil so special, and why you need to try it!})
 
 Post.create!(title: 'Recipes to Cook',
-    image:   'image5.jpg',
     description: 
     %{<p>
         CoffeeScript is JavaScript done right. It provides all of JavaScript's
@@ -64,7 +60,6 @@ Post.create!(title: 'Recipes to Cook',
         </p>})
 # . . .
 Post.create!(title: 'A FOODIE’S GUIDE',
-    image: 'image6.jpg',
     description:
         %{There’s one thing on Spanish menus that you might not be expecting.
 
@@ -76,7 +71,6 @@ Post.create!(title: 'A FOODIE’S GUIDE',
 # . . .
 
 Post.create!(title: 'TORRIJAS: THE SPANISH DESSERT YOU’VE BEEN MISSING',
-    image: 'image6.jpg',
     description: 
         %{A few weeks ago, I went to a friend’s wedding in Córdoba. The wedding was beautiful: spring is an amazing season in southern Spain! There were flowers, flamenco, and enough Spanish ham to feed a small village/one Spanish wedding.
 
@@ -91,7 +85,6 @@ Post.create!(title: 'TORRIJAS: THE SPANISH DESSERT YOU’VE BEEN MISSING',
             So, the next time you can, make sure you come to Córdoba. Eat, drink, and be merry, and make sure to check out my favourite places for getting your tapa on with my foodie’s guide to where to eat in Córdoba!})
 
 Post.create!(title: 'Recipes to Cook in March',
-    image:   'image1.jpg',
     description: 
     %{Think fast:
 
@@ -106,7 +99,6 @@ Post.create!(title: 'Recipes to Cook in March',
         You need to be eating torrijas.})
 # . . .
 Post.create!(title: 'THE SPANISH DESSERT YOU’VE BEEN MISSING',
-    image: 'image9.jpg',
     description:
         %{Like all great Spanish dishes, torrijas are simple, delicious, and all about letting a few great ingredients speak for themselves.
 
@@ -117,9 +109,7 @@ Post.create!(title: 'THE SPANISH DESSERT YOU’VE BEEN MISSING',
             They’re especially popular during the biggest week of the Spanish year, Semana Santa. During this Easter Holy Week, torrijas virtually fly out of bar kitchens as locals gobble them up with calorific glee. Why? Well, the reason is in the pudding.})
 # . . .
 
-Post.create!(title: 'THE BEST TORTILLA IN SEVILLE: 5 BARS YOU NEED TO VISIT
-    ',
-    image: 'image10.jpg',
+Post.create!(title: 'THE BEST TORTILLA IN SEVILLE: 5 BARS YOU NEED TO VISIT',
     description: 
         %{Some say that torrijas go all the way back to Roman times! That would make sense, given how much those guys loved bread, wine, honey, and olive oil.
 
@@ -132,7 +122,6 @@ Post.create!(title: 'THE BEST TORTILLA IN SEVILLE: 5 BARS YOU NEED TO VISIT
             Today, you might not find torrijas outside of Holy Week, particularly in more traditional cities such as Seville.})
 
 Post.create!(title: '9 Recipes to Cook in March',
-    image:   'image11.jpg',
     description: 
     %{French baguettes—they’re the best thing since… well, you get the idea.
 
@@ -143,7 +132,6 @@ Post.create!(title: '9 Recipes to Cook in March',
         I’m a big fan of French baguettes, and I recently went down the rabbit hole of trying to learn as much about them as possible. So without further ado, here are the five weirdest and most wonderful things I just learned about French baguettes!})
 # . . .
 Post.create!(title: '5 RANDOM FACTS I JUST LEARNT ABOUT FRENCH BAGUETTES',
-    image: 'image12.jpg',
     description:
         %{Remember the French Revolution?
 
@@ -155,5 +143,5 @@ Post.create!(title: '5 RANDOM FACTS I JUST LEARNT ABOUT FRENCH BAGUETTES',
             
             So, the law said that each year, half the bakers could go on vacation in July, and the other half in August.})
 # . . .
-User.create!(name: 'username',
+User.create!(name: 'username1',
     password: '123456')
