@@ -49,6 +49,11 @@
     .title {
       color: grey;
       font-size: 18px;
+
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     button {
       border: none;
@@ -57,7 +62,7 @@
       padding: 8px;
       margin-bottom: 0px;
       color: white;
-      background-color: #000;
+      background-color: rgb(136, 134, 43);
       text-align: center;
       width: 100%;
     }

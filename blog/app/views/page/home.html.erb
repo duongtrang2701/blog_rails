@@ -11,13 +11,13 @@
           <%= image_tag(post.image, class: 'list_image') %>
         </div>
         <div class="flip-card-back">
-          <h4><%= post.title %></h4> 
-          <p><%= post.created_at %></p> 
+          <h5>Post title: <%= post.title%></h5> 
+          <p>Created at: <%= post.created_at %></p> 
         </div>
       </div>
     </div>
     <p class="title"><%= post.title %></p>
-    <div>
+    <div style="margin: 24px 0;">
       <a href="#"><i class="fa fa-dribbble"></i></a> 
       <a href="#"><i class="fa fa-twitter"></i></a>  
       <a href="#"><i class="fa fa-linkedin"></i></a>  
@@ -26,7 +26,7 @@
     <button>
       <i class="fa fa-eye">  <%= post.impressionist_count%> </i>
       <i class="fa fa-comment"> <%= post.comments.count%> </i>
-      <i class="fa fa-info-circle" class="btn btn-primary"> <%= link_to 'Show', post %> </i>
+      <i class="fa fa-info-circle" class="btn btn-primary"> <%= link_to ' Show', post %> </i>
     </button>
   </div>
   <% end %>

@@ -1,6 +1,7 @@
 <% provide(:page_title, '_All Post_') %>
 
 <p id="notice"><%= notice %></p>
+<%= link_to 'New Post', new_post_path, class: "btn btn-effect-ripple btn-sm btn-success"%>
 
 <div class="row">
 <% @posts.each do |post| %>
@@ -11,8 +12,8 @@
           <%= image_tag(post.image, class: 'list_image') %>
         </div>
         <div class="flip-card-back">
-          <h4><%= post.title %></h4> 
-          <p><%= post.created_at %></p> 
+          <h5>Post title: <%= post.title%></h5> 
+          <p>Created at: <%= post.created_at %></p> 
         </div>
       </div>
     </div>
@@ -24,11 +25,11 @@
       <a href="#"><i class="fa fa-facebook"></i></a> 
     </div>
 
-    <a>
+    <button>
       <%= link_to 'Edit', edit_post_path(post), class: "btn btn-effect-ripple btn-sm btn-success fa fa-pencil"%>
       <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-effect-ripple btn-sm btn-danger fa fa-times"%>
       <%= link_to 'Show', post, class: "btn btn-effect-ripple btn-sm btn-info fa fa-eye"%>
-    </a>
+    </button>
   </div>
   <% end %>
 </div>

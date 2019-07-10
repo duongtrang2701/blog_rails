@@ -2,32 +2,34 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 <h2>List users</h2>
-<table class="table table-responsive text-center">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Username</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
+<div class="row">
+  <table class="table table-responsive text-center">
+    <thead class="thead-dark">
       <tr>
-        <th scope="row"></th>
-        <td><%= user.name %></td>
-        <td>
-          <a>
-            <%= link_to ' Show', user, class: "btn btn-effect-ripple btn-sm btn-info fa fa-eye"%>
-          </a>
-          <a>
-            <%= link_to ' Edit', edit_user_path(user), class: "btn btn-effect-ripple btn-sm btn-success fa fa-pencil"%>
-          </a>
-          <a>
-            <%= link_to ' Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-effect-ripple btn-sm btn-danger fa fa-times"%>
-          </a>  
-        </td>
+        <th scope="col">#</th>
+        <th scope="col">Username</th>
+        <th scope="col">Action</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= link_to 'New User', new_user_path, class: "btn btn-effect-ripple btn-sm btn-success"%>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <th scope="row"></th>
+          <td><%= user.name %></td>
+          <td>
+            <a>
+              <%= link_to ' Show', user, class: "btn btn-effect-ripple btn-sm btn-info fa fa-eye"%>
+            </a>
+            <a>
+              <%= link_to ' Edit', edit_user_path(user), class: "btn btn-effect-ripple btn-sm btn-success fa fa-pencil"%>
+            </a>
+            <a>
+              <%= link_to ' Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-effect-ripple btn-sm btn-danger fa fa-times"%>
+            </a>  
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'New User', new_user_path, class: "btn btn-effect-ripple btn-sm btn-success"%>
+</div>
