@@ -9,7 +9,9 @@
 
   <div class="center">
     <p>
+    <% if @post.image.attached?%>
       <%= image_tag(@post.image, class: "image_show") %>
+    <%end%>
     </p>
   </div>
 
@@ -19,7 +21,9 @@
 
   <div class="center">
     <p>
-      <%= image_tag(@post.image, class: "image_show") %>
+      <% if @post.image.attached?%>
+        <%= image_tag(@post.image, class: "image_show") %>
+      <%end%>
     </p>
   </div>
 

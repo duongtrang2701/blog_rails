@@ -9,7 +9,9 @@
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <%= image_tag(post.image, class: 'list_image') %>
+          <% if post.image.attached?%>
+            <%= image_tag(post.image, class: 'list_image')%>
+          <%end%>
         </div>
         <div class="flip-card-back">
           <h5>Post title: <%= post.title%></h5> 
